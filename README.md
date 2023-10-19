@@ -8,7 +8,7 @@ Basic API for listing vehicles with Actix framework. All data are stored on Mong
 
 You can use a local server for MongoDB, or you can you get a URL on [Atlas](https://www.mongodb.com/atlas).
 
----
+##
 
 ### Set the env variables
 
@@ -20,7 +20,7 @@ Yor `config.toml` file should look something like this at the end:
 [env]
 DB_URL="URL to your Mongo db"
 ```
----
+##
 
 ### Run the API
 
