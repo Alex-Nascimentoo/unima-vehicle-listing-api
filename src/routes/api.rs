@@ -13,7 +13,8 @@ pub struct VehicleInput {
     v_type: String,
     brand: String,
     model: String,
-    color: String
+    color: String,
+    price: String
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -21,7 +22,8 @@ pub struct VehicleUpdateInput {
     id: String,
     brand: String,
     model: String,
-    color: String
+    color: String,
+    price: String
 }
 
 // pub async fn test() -> impl Responder {
@@ -59,7 +61,8 @@ pub async fn create_vehicle(
         vehicle_type,
         String::from(v.brand.to_owned()),
         String::from(v.model.to_owned()),
-        String::from(v.color.to_owned())
+        String::from(v.color.to_owned()),
+        String::from(v.price.to_owned())
     );
 
     let _ = Vehicle::save(db, new_vehicle).await;
@@ -75,7 +78,8 @@ pub async fn update_vehicle(
         VehicleType::Car,
         String::from(v.brand.to_owned()),
         String::from(v.model.to_owned()),
-        String::from(v.color.to_owned())
+        String::from(v.color.to_owned()),
+        String::from(v.price.to_owned()),
     );
 
     let _ = Vehicle::update_by_id(db, &v.id, old_vehicle).await;
