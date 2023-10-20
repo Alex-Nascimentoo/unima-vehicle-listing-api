@@ -21,6 +21,7 @@ pub struct Vehicle {
   pub brand: String,
   pub model: String,
   pub color: String,
+  pub price: String,
   wheels: u8,
   doors: u8,
   is_available: bool
@@ -31,7 +32,8 @@ impl Vehicle {
     v_type: VehicleType,
     b: String,
     m: String,
-    c: String
+    c: String,
+    p: String
   ) -> Vehicle {
     match v_type {
       VehicleType::Car => Vehicle {
@@ -39,6 +41,7 @@ impl Vehicle {
         brand: b,
         model: m,
         color: c,
+        price: p,
         wheels: 4,
         doors: 4,
         is_available: true
@@ -48,6 +51,7 @@ impl Vehicle {
         brand: b,
         model: m,
         color: c,
+        price: p,
         wheels: 2,
         doors: 0,
         is_available: true
