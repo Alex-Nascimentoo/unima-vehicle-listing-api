@@ -120,7 +120,8 @@ impl Vehicle {
           "$set": {
             "brand": v.brand,
             "model": v.model,
-            "color": v.color
+            "color": v.color,
+            "price": v.price
           }
         },
         None
