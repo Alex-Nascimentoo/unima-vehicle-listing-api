@@ -68,11 +68,6 @@ impl Vehicle {
   }
 
   pub async fn get_all(db: web::Data<Collection<Vehicle>>) -> Result<Vec<Vehicle>, Error> {
-    // let uri: String = env::var("DB_URL").unwrap();
-    // let client = Client::with_uri_str(&uri).await.expect("could not connect to DB");
-    // let db = client.database("vehicle-listing");
-    // let col = db.collection::<Vehicle>("vehicles");
-
     let mut cursors = db
       .find(None, None)
       .await
@@ -148,7 +143,3 @@ impl Vehicle {
   }
 
 }
-
-// pub trait Vehicle {
-//   fn toggle_status(&mut self);
-// }
